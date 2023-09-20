@@ -8,10 +8,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="egov-workflow-v2" />
+        <module name="death-registration" />
         <module name="egov-idgen" />
         <module name="egov-mdms-service-test" />
         <module name="egov-persister" />
-        <module name="death-registration" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

@@ -30,21 +30,20 @@ import lombok.Builder;
 @NoArgsConstructor
 @Builder
 public class DeathRegistrationRequest   {
-        @JsonProperty("RequestInfo")
-        private RequestInfo requestInfo = null;
+    @JsonProperty("RequestInfo")
+    private RequestInfo requestInfo = null;
 
-        @JsonProperty("DeathRegistrationApplications")
-        @Valid
-        private List<DeathRegistrationApplication> deathRegistrationApplications = null;
+    @JsonProperty("DeathRegistrationApplications")
+    @Valid
+    private List<DeathRegistrationApplication> deathRegistrationApplications = null;
 
 
-        public DeathRegistrationRequest addDeathRegistrationApplicationsItem(DeathRegistrationApplication deathRegistrationApplicationsItem) {
-            if (this.deathRegistrationApplications == null) {
+    public DeathRegistrationRequest addDeathRegistrationApplicationsItem(DeathRegistrationApplication deathRegistrationApplicationsItem) {
+        if (this.deathRegistrationApplications == null) {
             this.deathRegistrationApplications = new ArrayList<>();
-            }
+        }
         this.deathRegistrationApplications.add(deathRegistrationApplicationsItem);
         return this;
-        }
+    }
 
 }
-

@@ -89,7 +89,9 @@ public class DeathRegistrationService {
         // Enrich application upon update
         enrichmentUtil.enrichDeathApplicationUponUpdate(deathRegistrationRequest);
 
-        workflowService.updateWorkflowStatus(deathRegistrationRequest);
+        if(deathRegistrationRequest.getDeathRegistrationApplications().get(0).getWorkflow()!=null) {
+            workflowService.updateWorkflowStatus(deathRegistrationRequest);
+        }
 
         // Just like create request, update request will be handled asynchronously by the persister
         producer.push("update-dt-application", deathRegistrationRequest);

@@ -35,3 +35,4 @@ CREATE TABLE dt_address(
      ON UPDATE CASCADE
      ON DELETE CASCADE
 );
+
